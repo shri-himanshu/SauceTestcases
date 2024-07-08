@@ -1,0 +1,89 @@
+{
+  "test_login_page": {
+    "test_valid_login": {
+      "user": "standard_user",
+      "password": "secret_sauce",
+      "expected_url": "inventory"
+    },
+
+    "test_invalid_login": {
+      "user": "locked_out_user",
+      "password": "secret_sauce",
+      "expected_error": "Epic sadface: Sorry, this user has been locked out."
+    }
+  },
+
+  "test_performance_user": {
+    "test_performance_user_login": {
+      "user": "performance_glitch_user",
+      "password": "secret_sauce",
+      "expected_url": "inventory",
+      "max_latency": 10
+    }
+  },
+
+  "test_perf_user_functionality": {
+    "test_performance_user_functionality": {
+      "user": "performance_glitch_user",
+      "password": "secret_sauce",
+      "expected_url": "inventory",
+      "inventory_add": ["backpack", "redtshirt", "bikelight", "fleece", "onesie", "tshirt"],
+      "firstname": "Jane",
+      "lastname": "Doe",
+      "postalcode": "110110"
+    }
+  },
+
+  "test_standard_user_functionality": {
+    "test_standard_user_functionality": {
+      "user": "standard_user",
+      "password": "secret_sauce",
+      "expected_url": "inventory",
+      "inventory_add": ["backpack", "redtshirt", "bikelight", "fleece", "onesie", "tshirt"],
+      "firstname": "Jane",
+      "lastname": "Doe",
+      "postalcode": "110110"
+    }
+  },
+
+  "test_error_user_add_remove_items": {
+    "test_error_user_add_remove_items": {
+      "user": "error_user",
+      "password": "secret_sauce",
+      "expected_url": "inventory",
+      "inventory_add": ["backpack", "redtshirt", "bikelight", "fleece", "onesie", "tshirt"]
+    }
+  },
+
+  "test_error_user_checkout_fail": {
+    "test_error_user_checkout_fail": {
+      "user": "error_user",
+      "password": "secret_sauce",
+      "expected_url": "inventory",
+      "inventory_add": ["backpack", "bikelight"],
+      "firstname": "Jane",
+      "lastname": "Doe",
+      "postalcode": "110110"
+    }
+  },
+
+  "test_problem_user_item_img": {
+    "test_problem_user_item_img": {
+      "user": "problem_user",
+      "password": "secret_sauce",
+      "expected_url": "inventory",
+      "items": ["backpack", "bikelight"]
+    }
+  },
+
+  "test_visual_user_image_missing": {
+    "test_visual_user_image_missing": {
+      "user": "problem_user",
+      "password": "secret_sauce",
+      "expected_url": "inventory",
+      "items": ["backpack", "redtshirt", "bikelight", "fleece", "onesie", "tshirt"]
+    }
+  }
+
+
+}
